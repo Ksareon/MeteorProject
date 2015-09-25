@@ -9,7 +9,13 @@
 
   Template.geoportal_page_subjects.helpers({
     name_value: function(){
-      return Filters.name;
+      return {
+      collection: Subjects.find({}),
+      fields: [
+        { key: 'name', label: 'Название' },
+      ]
+    }
+      // return Filters.name;
     }
   });
 

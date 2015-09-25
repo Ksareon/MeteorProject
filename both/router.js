@@ -19,9 +19,13 @@ Router.route('/subjects/add', function () {
   this.render('subjects_add_page');
 });
 
+// Router.route('/subjects/:id', function () {
+//   var subject = Subjects.findOne({_id: this.params.id});
+//   this.render('subjects_edit_page', { data: subject });
+// });
 Router.route('/subjects/:id', function () {
   var subject = Subjects.findOne({_id: this.params.id});
-  this.render('subjects_edit_page', { data: subject });
+  this.render('subjects_page_actions', { data: subject });
 });
 
 Router.route('/geteoportal', function() {
